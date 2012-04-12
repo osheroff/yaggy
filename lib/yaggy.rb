@@ -1,3 +1,5 @@
+require 'yaggy/gem'
+
 module Yaggy
   def self.gem(file, options = {})
     @gems ||= []
