@@ -8,7 +8,7 @@ module Yaggy
     end
 
     def query_gemspec
-      mock_spec = Yaggy::MockSpec.capture_gemspec_info(@filename)
+      mock_spec = Yaggy::MockSpec.capture_gemspec_info(@gemspec)
       version = mock_spec.version
       version_line = mock_spec.version_line
       @major, @minor, @patch = version.split('.')
