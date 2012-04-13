@@ -11,7 +11,15 @@ module Yaggy
       @@gems[@@current_file] = self
     end
 
-    attr_accessor :version, :name
+    attr_reader :version
+
+    def version=(v)
+      require 'ruby-debug'
+      @version_line = caller.detect { |l| l !~ /#{__FILE__}/ }.split(":")[1]
+      @version = v
+    end
+
+    attr_accessor :name
 
     def self.capture_gemspec_info(gemspec)
       @@gems ||= {}
