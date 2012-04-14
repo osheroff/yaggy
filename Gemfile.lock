@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yaggy (0.0.1)
+    yaggy (0.0.8)
 
 GEM
   remote: http://rubygems.org/
@@ -36,6 +36,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   debugger
   mocha
   rake
