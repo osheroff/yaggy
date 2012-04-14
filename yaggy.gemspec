@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "yaggy"
-  s.version = "0.0.1"
+  s.version = "0.0.6"
 
   s.authors = ["Ben Osheroff"]
   s.date = %q{2012-04-11}
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.5.3}
 
   s.add_development_dependency("rake")
+  s.add_development_dependency("bundler")
   s.add_development_dependency("mocha")
   s.add_development_dependency("shoulda")
   s.add_development_dependency("ruby-debug") if RUBY_VERSION < "1.9.0"
