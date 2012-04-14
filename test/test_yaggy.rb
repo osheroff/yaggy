@@ -4,6 +4,7 @@ Bundler.setup
 
 require 'test/unit'
 require 'shoulda'
+require 'ruby-debug'
 require 'yaggy'
 
 class YaggyTest < Test::Unit::TestCase

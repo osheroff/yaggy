@@ -1,9 +1,10 @@
 module Yaggy
   class Release
     class << self
-      def release_patch
+      def release(what)
         gem = Yaggy.current_gem
-        gem.rev_patch!
+        gem.send("rev_#{what}!")
+        puts("Releasing #{gem.name} version #{gem.version}")
         gem.write!
         if gem.use_git?
           gem.commit!
