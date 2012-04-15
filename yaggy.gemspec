@@ -13,7 +13,8 @@ Gem::Specification.new do |s|
   s.files = [
     "README.md",
     "lib/yaggy.rb"
-  ]
+  ] + Dir.glob("lib/yaggy/*.rb")
+
   s.homepage = "http://github.com/osheroff/yaggy"
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.5.3}
