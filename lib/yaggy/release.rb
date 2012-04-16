@@ -9,6 +9,9 @@ module Yaggy
         if gem.use_git?
           gem.commit!
         end
+        if gem.push_gem?
+          gem.push!
+        end
       end
     end
   end

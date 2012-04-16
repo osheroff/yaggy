@@ -8,6 +8,10 @@ module Yaggy
       query_gemspec
     end
 
+    def push_gem?
+      @options[:push_gem]
+    end
+
     def use_git?
       if @options.key?(:git_ops)
         @options[:git_ops]
@@ -20,7 +24,16 @@ module Yaggy
       system("git add #{@gemspec}")
       system("git commit -m 'version #{version}'")
       system("git tag v#{version}")
-      system("git push --all --tags") unless %x{git remote}.chomp.empty?
+      if !%x{git remote}.chomp.empty?
+        system("git push")
+        system("git push --tags")
+      end
+    end
+
+    def push!
+      output = `gem build #{@gemspec}`
+      # todo: some minimal error detection
+      system("gem push #{@name}-#{version}.gem")
     end
 
     def query_gemspec
