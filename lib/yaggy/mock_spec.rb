@@ -18,6 +18,10 @@ module Yaggy
       @version = v
     end
 
+    def executables
+      []
+    end
+
     attr_accessor :name
 
     def self.capture_gemspec_info(gemspec)
