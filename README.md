@@ -22,10 +22,10 @@ Yaggy.gem('my_gem.gemspec', :update_gemfile => "~/src/main_project/Gemfile")
 
 ## tasks
 
-rake release  # defaults to a patch revision
-rake release:patch
-rake release:minor
-rake release:major
+- rake release  # defaults to a patch revision
+- rake release:patch
+- rake release:minor
+- rake release:major
 
 
 
