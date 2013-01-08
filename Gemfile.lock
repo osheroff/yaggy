@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yaggy (0.1.5)
+    yaggy (0.1.6)
 
 GEM
   remote: http://rubygems.org/

@@ -22,6 +22,10 @@ module Yaggy
       []
     end
 
+    def files
+      []
+    end
+
     attr_accessor :name
 
     def self.capture_gemspec_info(gemspec)
